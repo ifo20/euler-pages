@@ -1,6 +1,7 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using EulerPages.Models;
+using Microsoft.EntityFrameworkCore;
 
-namespace EulerPages.Models
+namespace EulerPages.Data
 {
     public class ProblemContext : DbContext
     {

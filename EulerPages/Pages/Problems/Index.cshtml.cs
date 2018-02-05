@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
+using EulerPages.Data;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 using EulerPages.Models;
@@ -8,9 +9,9 @@ namespace EulerPages.Pages.Problems
 {
     public class IndexModel : PageModel
     {
-        private readonly EulerPages.Models.ProblemContext _context;
+        private readonly ProblemContext _context;
 
-        public IndexModel(EulerPages.Models.ProblemContext context)
+        public IndexModel(ProblemContext context)
         {
             _context = context;
         }

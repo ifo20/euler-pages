@@ -1,4 +1,5 @@
 ﻿using System.Threading.Tasks;
+using EulerPages.Data;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
@@ -8,9 +9,9 @@ namespace EulerPages.Pages.Problems
 {
     public class DetailsModel : PageModel
     {
-        private readonly EulerPages.Models.ProblemContext _context;
+        private readonly ProblemContext _context;
 
-        public DetailsModel(EulerPages.Models.ProblemContext context)
+        public DetailsModel(ProblemContext context)
         {
             _context = context;
         }

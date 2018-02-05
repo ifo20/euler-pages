@@ -11,5 +11,7 @@ namespace EulerPages.Models
         public int ProblemId { get; set; }
         public Problem Problem { get; set; }
         public string Text { get; set; }
+        public string Code { get; set; }
+        public int Score { get; set; }
     }
 }
