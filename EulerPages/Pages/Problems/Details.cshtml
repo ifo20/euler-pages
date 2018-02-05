@@ -1,4 +1,4 @@
-@page
+﻿@page
 @model EulerPages.Pages.Problems.DetailsModel
 
 @{
@@ -24,26 +24,14 @@
             @Html.DisplayFor(model => model.Problem.Question)
         </dd>
         <dt>
-            @Html.DisplayNameFor(model => model.Problem.Solved)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.Problem.Solved)
-        </dd>
-        <dt>
             @Html.DisplayNameFor(model => model.Problem.Answer)
         </dt>
         <dd>
             @Html.DisplayFor(model => model.Problem.Answer)
         </dd>
-        <dt>
-            @Html.DisplayNameFor(model => model.Problem.Solution)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.Problem.Solution)
-        </dd>
     </dl>
 </div>
 <div>
-    <a asp-page="./Edit" asp-route-id="@Model.Problem.Id">Edit</a> |
+    <a asp-page="./Edit" asp-route-id="@Model.Problem.ProblemId">Edit</a> |
     <a asp-page="./Index">Back to List</a>
 </div>

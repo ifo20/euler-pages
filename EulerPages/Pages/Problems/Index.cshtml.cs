@@ -1,8 +1,5 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System.Collections.Generic;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 using EulerPages.Models;
@@ -18,11 +15,11 @@ namespace EulerPages.Pages.Problems
             _context = context;
         }
 
-        public IList<Problem> Problem { get;set; }
+        public IList<Problem> Problem { get; set; }
 
         public async Task OnGetAsync()
         {
-            Problem = await _context.Problem.ToListAsync();
+            Problem = await _context.Problems.ToListAsync();
         }
     }
 }

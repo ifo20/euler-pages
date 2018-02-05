@@ -27,7 +27,7 @@ namespace EulerPages
                 {
                     var context = services.GetRequiredService<ProblemContext>();
                     context.Database.Migrate();
-                    SeedData.Initialize(services);
+                    DbInitializer.Initialize(services);
                 }
                 catch (Exception ex)
                 {

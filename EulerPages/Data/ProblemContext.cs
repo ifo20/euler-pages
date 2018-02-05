@@ -9,6 +9,7 @@ namespace EulerPages.Models
             
         }
 
-        public DbSet<Problem> Problem { get; set; }
+        public DbSet<Problem> Problems { get; set; }
+        public DbSet<Solution> Solutions { get; set; }
     }
 }

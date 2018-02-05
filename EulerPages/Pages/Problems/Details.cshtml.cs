@@ -1,7 +1,4 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
@@ -27,7 +24,7 @@ namespace EulerPages.Pages.Problems
                 return NotFound();
             }
 
-            Problem = await _context.Problem.SingleOrDefaultAsync(m => m.Id == id);
+            Problem = await _context.Problems.SingleOrDefaultAsync(m => m.ProblemId == id);
 
             if (Problem == null)
             {
