@@ -11,9 +11,10 @@ using System;
 namespace EulerPages.Migrations
 {
     [DbContext(typeof(ProblemContext))]
-    partial class ProblemContextModelSnapshot : ModelSnapshot
+    [Migration("20180205125449_Initial-2")]
+    partial class Initial2
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

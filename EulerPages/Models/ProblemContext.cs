@@ -9,6 +9,6 @@ namespace EulerPages.Models
             
         }
 
-        public DbSet<Problem> Movie { get; set; }
+        public DbSet<Problem> Problem { get; set; }
     }
 }

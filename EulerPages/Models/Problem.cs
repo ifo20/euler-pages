@@ -7,11 +7,11 @@ namespace EulerPages.Models
 {
     public class Problem : IProblem
     {
-        public int Id { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public string Title { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public string Question { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public bool Solved { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public int Answer { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public string Solution { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public int Id { get; set; }
+        public string Title { get; set; }
+        public string Question { get; set; }
+        public bool Solved { get; set; }
+        public int Answer { get; set; }
+        public string Solution { get; set; }
     }
 }
