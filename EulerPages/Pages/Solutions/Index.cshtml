@@ -1,0 +1,60 @@
+@page
+@model EulerPages.Pages.Solutions.IndexModel
+
+@{
+    ViewData["Title"] = "Solutions";
+}
+
+<h2>Courses</h2>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Solution[0].SolutionId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Solution[0].Text)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Solution[0].Code)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Solution[0].Score)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Solution[0].Problem)
+        </th>
+        <th></th>
+    </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Solution) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.SolutionId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Text)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Code)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Score)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Problem.Title)
+        </td>
+        <td>
+            <a asp-page="./Edit" asp-route-id="@item.SolutionId">Edit</a> |
+            <a asp-page="./Details" asp-route-id="@item.SolutionId">Details</a> |
+            <a asp-page="./Delete" asp-route-id="@item.SolutionId">Delete</a>
+        </td>
+    </tr>
+}
+    </tbody>
+</table>
