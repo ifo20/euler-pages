@@ -2,13 +2,12 @@
 @model EulerPages.Pages.Solutions.DetailsModel
 
 @{
-    ViewData["Title"] = "Details";
+    ViewData["Title"] = "Solution Detail";
 }
 
-<h2>Details</h2>
-
+<h2>Solution for Problem @Html.DisplayFor(model => model.Solution.ProblemId) - @Html.DisplayFor(model => model.Solution.Problem.Title)</h2>
+    
 <div>
-    <h4>Solution</h4>
     <hr />
     <dl class="dl-horizontal">
         <dt>
@@ -22,18 +21,6 @@
         </dt>
         <dd>
             @Html.DisplayFor(model => model.Solution.Code)
-        </dd>
-        <dt>
-            @Html.DisplayNameFor(model => model.Solution.Score)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.Solution.Score)
-        </dd>
-        <dt>
-            @Html.DisplayNameFor(model => model.Solution.Problem)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.Solution.Problem.ProblemId)
         </dd>
     </dl>
 </div>
