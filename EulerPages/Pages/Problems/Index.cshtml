@@ -23,6 +23,9 @@
             @Html.DisplayNameFor(model => model.Problem[0].Question)
         </th>
         <th>
+            @Html.DisplayNameFor(model => model.Problem[0].Solutions)
+        </th>
+        <th>
             @Html.DisplayNameFor(model => model.Problem[0].Answer)
         </th>
         <th></th>
@@ -39,6 +42,15 @@
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Question)
+            </td>
+            <td>
+                @if (item.Solutions != null)
+                {
+                    @foreach (var solution in item.Solutions)
+                    {
+                        @Html.Raw(solution.SolutionId)
+                    }
+                }
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Answer)

@@ -20,7 +20,10 @@ namespace EulerPages.Pages.Problems
 
         public async Task OnGetAsync()
         {
-            Problem = await _context.Problems.ToListAsync();
+            Problem = await _context.Problems
+                .Include(p => p.Solutions)
+                .AsNoTracking()
+                .ToListAsync();
         }
     }
 }

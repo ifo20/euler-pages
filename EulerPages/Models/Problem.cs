@@ -10,7 +10,8 @@ namespace EulerPages.Models
         public int ProblemId { get; set; }
         public string Title { get; set; }
         public string Question { get; set; }
-        [DisplayFormat(NullDisplayText = "Not answered yet")]
+
+        [DisplayFormat(DataFormatString = "{0:N0}", NullDisplayText = "Not answered yet")]
         public int? Answer { get; set; }
         public ICollection<Solution> Solutions { get; set; }
     }
