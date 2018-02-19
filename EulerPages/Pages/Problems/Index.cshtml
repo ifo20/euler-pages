@@ -2,10 +2,10 @@
 @model EulerPages.Pages.Problems.IndexModel
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Problems";
 }
 
-<h2>Index</h2>
+<h2>Problems</h2>
 
 <p>
     <a asp-page="Create">Create New</a>
@@ -13,6 +13,9 @@
 <table class="table">
     <thead>
     <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Problem[0].ProblemId)
+        </th>
         <th>
             @Html.DisplayNameFor(model => model.Problem[0].Title)
         </th>
@@ -29,6 +32,9 @@
     @foreach (var item in Model.Problem) {
         <tr>
             <td>
+                @Html.DisplayFor(modelItem => item.ProblemId)
+            </td>
+            <td>
                 @Html.DisplayFor(modelItem => item.Title)
             </td>
             <td>
@@ -38,9 +44,7 @@
                 @Html.DisplayFor(modelItem => item.Answer)
             </td>
             <td>
-                <a asp-page="./Edit" asp-route-id="@item.ProblemId">Edit</a> |
-                <a asp-page="./Details" asp-route-id="@item.ProblemId">Details</a> |
-                <a asp-page="./Delete" asp-route-id="@item.ProblemId">Delete</a>
+                <a asp-page="./Details" asp-route-id="@item.ProblemId">Details</a>
             </td>
         </tr>
     }
